@@ -104,9 +104,15 @@
 
 		if ( mouseY > window.innerHeight/2 ) {
 			console.log( "arrow height: ", popup_box_arrow_rect.height );
-			document.querySelector( '.popup-box' ).style.top = mouseY + window.scrollY - popup_box_element.getBoundingClientRect().height + 'px';
+			document.querySelector( '.popup-box' ).style.top = mouseY + window.scrollY - popup_box_element.getBoundingClientRect().height - popup_box_arrow_rect.height + 'px';
+			document.querySelector( '.popup-box-arrow' ).style.top = popup_box_element.getBoundingClientRect().height + 'px';
+			document.querySelector( '.popup-box-arrow' ).style.borderTop = "16px solid black";
+			document.querySelector( '.popup-box-arrow' ).style.borderBottom = "0";
 		} else {
 			document.querySelector( '.popup-box' ).style.top = mouseY + window.scrollY + popup_box_arrow_rect.height + 'px';
+			document.querySelector( '.popup-box-arrow' ).style.top = -16 + 'px';
+			document.querySelector( '.popup-box-arrow' ).style.borderTop = "0";
+			document.querySelector( '.popup-box-arrow' ).style.borderBottom = "16px solid black";
 		}
 
 

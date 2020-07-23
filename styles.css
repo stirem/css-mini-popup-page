@@ -86,6 +86,7 @@ a.popup-link:hover {
 	border-left: 16px solid transparent;
 	border-right: 16px solid transparent;
 	border-bottom: 16px solid black;
+	border-top: 0;
 	top: -16px; /* half of popup-box padding */
 	left: 0px;
 }
