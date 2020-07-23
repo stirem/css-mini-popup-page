@@ -1,0 +1,147 @@
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+	background: #FFF8E5;
+}
+
+p {
+	margin: 0;
+	line-height: 150%;
+}
+
+a {
+	color: green;
+}
+
+.content-wrap {
+	max-width: 800px;
+	width: 85%;
+	margin: 100px auto;
+	background: #fff;
+	padding: 20px;
+}
+
+a.external-link {
+	color: blue;
+	font-style: italic;
+	text-decoration: none;
+	cursor: pointer;
+}
+a.external-link:visited {
+	color: blue;
+}
+a.external-link:hover {
+	text-decoration: underline;
+}
+
+
+/*-----------------------------POP-UP-------------------------------*/
+a.popup-link {
+	color: red;
+	font-weight: 600;
+	text-decoration: none;
+	cursor: pointer;
+}
+a.popup-link:visited {
+	color: red;
+}
+a.popup-link:hover {
+	text-decoration: underline;
+}
+
+.popup-box {
+	position: absolute;
+	display: none; /* Hide before click */
+	width: 400px;
+	background-color: black;
+	color: white;
+	z-index: 2;
+	padding: 32px;
+	line-height: 150%;
+	/*border-radius: 25px;*/
+	box-shadow: 0px 0px 10px 0px #000;
+	margin-bottom: 50px;
+	transform-origin: bottom right;
+
+	/*background-image: url("sekiro.jpg");
+	background-position: center top;
+	background-size: 100%;
+	background-repeat: no-repeat;*/
+}
+
+.popup-box-arrow {
+	position: absolute;
+	width: 0; 
+	height: 0; 
+	border-left: 16px solid transparent;
+	border-right: 16px solid transparent;
+	border-bottom: 16px solid black;
+	top: -16px; /* half of popup-box padding */
+	left: 0px;
+}
+
+.popup-text {
+
+}
+
+.popup-goto-link-box {
+	margin-top: 20px;
+}
+a.popup-goto-link {
+	color: red;
+	font-weight: 900;
+	font-size: 150%;
+	text-decoration: none;
+}
+a.popup-goto-link:hover {
+	text-decoration: underline;
+}
+a.popup-goto-link:visited {
+	color: red;
+}
+
+img.popup-image {
+	max-width: 100%;
+	margin-bottom: 20px;
+}
+/*------------------------------------------------------------------*/
+
+
+
+/*----------------------------RESPONSIVE----------------------------*/
+@media screen and ( max-width: 749px ) {
+
+	p {
+		font-size: 80%;
+	}
+
+	.popup-box {
+		/*width: 80%;*/
+		/*left*/
+		/*margin-left: -40%; /* Negative half of width. */
+		font-size: 80%;
+		padding: 25px;
+	}
+
+	/* Arrow */
+	.popup-box::before {
+		display: none;
+	}
+
+}
+
+@media screen and ( min-width: 750px ) {
+
+}
+
+/*------------------------------------------------------------------*/
