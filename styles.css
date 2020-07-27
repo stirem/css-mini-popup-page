@@ -129,7 +129,8 @@ img.popup-image {
 	.popup-box {
 		width: 80%;
 		left: 50%;
-		margin-left: -40%; /* Negative half of width. */
+		margin-left: -40%;
+
 		font-size: 80%;
 		padding: 25px;
 	}

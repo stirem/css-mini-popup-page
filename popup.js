@@ -1,3 +1,14 @@
+
+
+// Click anywhere outside popup-goto-link to close popup box
+document.addEventListener( 'mousedown', function ( event ) {
+  if ( ! document.querySelector( '.popup-goto-link' ).contains( event.target ) ) {
+    document.querySelector( '.popup-box' ).style.display = "none";
+  }
+});
+
+
+
 var popup = (function() {
   'use strict';
 
@@ -6,13 +17,6 @@ var popup = (function() {
   var string_planter = "Grønne planter er en stor plantegruppe som omfatter både encellede og flercellede alger og landplanter. Felles for disse er grønnfargen, som kommer av at kloroplastene inneholder klorofylltypene a og b. Et ytterligere fellestrekk (homologi), som oppstod i stamarten til de grønne planter, er celleveggen. ";
   var string_goto_link_planter = "https://no.wikipedia.org/wiki/Gr%C3%B8nne_planter";
 
-
-  // Click anywhere outside popup-goto-link to close popup box
-  document.addEventListener( 'mousedown', function ( event ) {
-    if ( ! document.querySelector( '.popup-goto-link' ).contains( event.target ) ) {
-      document.querySelector( '.popup-box' ).style.display = "none";
-    }
-  });
 
   function showBox( clickedElementID, event ) {
 
@@ -53,13 +57,24 @@ var popup = (function() {
       document.querySelector( '.popup-box' ).style.top = mouseY + window.scrollY + popup_box_arrow_rect.height + 'px';
     }
 
-    if ( mouseX < window.innerWidth/2 ) {
-      document.querySelector( '.popup-box' ).style.left = mouseX - (popup_box_arrow_rect.width/2) + 'px';
-      document.querySelector( '.popup-box-arrow' ).style.left = 0;
+
+    if ( window.matchMedia("(min-width: 750px)").matches ) {
+
+      if ( mouseX < window.innerWidth/2 ) {
+        document.querySelector( '.popup-box' ).style.left = mouseX - (popup_box_arrow_rect.width/2) + 'px';
+        document.querySelector( '.popup-box-arrow' ).style.left = 0;
+      } else {
+        document.querySelector( '.popup-box' ).style.left = mouseX - popup_box_rect.width + (popup_box_arrow_rect.width/2) + 'px';
+        document.querySelector( '.popup-box-arrow' ).style.left = popup_box_rect.width - popup_box_arrow_rect.width + 'px';
+      }
+
     } else {
-      document.querySelector( '.popup-box' ).style.left = mouseX - popup_box_rect.width + (popup_box_arrow_rect.width/2) + 'px';
-      document.querySelector( '.popup-box-arrow' ).style.left = popup_box_rect.width - popup_box_arrow_rect.width + 'px';
+
+      document.querySelector( '.popup-box-arrow' ).style.left = mouseX - popup_box_arrow_rect.width - (popup_box_arrow_rect.width/2) + 'px';
+
     }
+
+
 
   }
 
