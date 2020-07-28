@@ -22,16 +22,18 @@ var popup = (function() {
 
   function showBox( clickedElementID, event ) {
 
-    document.querySelector( '.popup-box' ).style.display = "block";
+    document.querySelector( '.popup-box' ).style.display = "inline-grid";
     document.querySelector( '.popup-box-arrow' ).style.display = "block";
 
     if ( clickedElementID == 1 ) {
       document.querySelector( '.popup-text' ).innerHTML = string_alger;
-      document.querySelector( '.popup-image' ).src = "alger.jpg";
+      //document.querySelector( '.popup-image' ).src = "alger.jpg";
+      document.querySelector( ' .popup-box' ).style.backgroundImage = "url('alger.jpg')";
       document.querySelector( '.popup-goto-link' ).href = string_goto_link_alger;
     } else if ( clickedElementID == 2 ) {
       document.querySelector( '.popup-text' ).innerHTML = string_planter;
-      document.querySelector( '.popup-image' ).src = "planter.jpg";
+      //document.querySelector( '.popup-image' ).src = "planter.jpg";
+      document.querySelector( ' .popup-box' ).style.backgroundImage = "url('planter.jpg')";
       document.querySelector( '.popup-goto-link' ).href = string_goto_link_planter;
     }
 

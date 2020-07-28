@@ -72,10 +72,19 @@ a.popup-link:hover {
 	box-shadow: 0px 0px 10px 0px #000;
 	margin-bottom: 50px;
 
-	/*background-image: url("sekiro.jpg");
+	background-image: url("sekiro.jpg");
 	background-position: center top;
 	background-size: 100%;
-	background-repeat: no-repeat;*/
+	background-repeat: no-repeat;
+}
+
+.popup-box-grid-top {
+	border: 1px solid rgba(1.0, 0, 0, 1.0);
+	padding: 200px 0px 0px 0px;
+}
+
+.popup-box-grid-bottom {
+	border: 1px solid rgba(0, 1.0, 0, 1.0);
 }
 
 .popup-box-arrow {
