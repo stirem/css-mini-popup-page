@@ -66,11 +66,11 @@ a.popup-link:hover {
 	background-color: black;
 	color: white;
 	z-index: 2;
-	padding: 0;
+	padding: 32px;
 	line-height: 150%;
 	/*border-radius: 25px;*/
 	box-shadow: 0px 0px 10px 0px #000;
-	margin-bottom: 50px;
+	/*margin-bottom: 50px;*/
 }
 
 .popup-box-grid-top {
@@ -79,12 +79,11 @@ a.popup-link:hover {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	/*border: 1px solid rgba(1.0, 0, 0, 1.0);*/
-	padding: 200px 0px 0px 0px;
+	padding: 50% 0 0 0;
 }
 
 .popup-box-grid-bottom {
 	/*border: 1px solid rgba(0, 1.0, 0, 1.0);*/
-	padding: 32px;
 }
 
 .popup-box-arrow {
@@ -101,7 +100,7 @@ a.popup-link:hover {
 }
 
 .popup-text {
-
+	padding-top: 32px;
 }
 
 .popup-goto-link-box {
@@ -141,7 +140,7 @@ img.popup-image {
 		margin-left: -43%;
 
 		font-size: 80%;
-		padding: 25px;
+		/*padding: 25px;*/
 	}
 
 }
