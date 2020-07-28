@@ -15,7 +15,7 @@ var popup = (function() {
 
   var string_alger = "Blåalger (Glaucophyta eller Glaucocystophyta) er en liten gruppe (rekke) av encellede planter (alger). Gruppen ble tidligere regnet som protozoer (urdyr) med innfangete kloroplaster fra cyanobakterier (blågrønnalger), men i nyere tid er det vist at de har ekte kloroplaster.[1] Disse er imidlertid primitive med rester av cyanobakterienes gram-negative cellevegg i behold. Plastiden er tydelig blågrønn, med fykocyanobilin dominerende over klorofyllet. Man kjenner kun få arter av blåalger, de lever i ferskvann.";
   var string_goto_link_alger = "https://no.wikipedia.org/wiki/Bl%C3%A5alger";
-  var string_planter = "Grønne planter er en stor plantegruppe som omfatter både encellede og flercellede alger og landplanter. Felles for disse er grønnfargen, som kommer av at kloroplastene inneholder klorofylltypene a og b. Et ytterligere fellestrekk (homologi), som oppstod i stamarten til de grønne planter, er celleveggen. ";
+  var string_planter = "Grønne planter er en stor plantegruppe som omfatter både encellede og flercellede alger og landplanter. Felles for disse er grønnfargen, som kommer av at kloroplastene inneholder klorofylltypene a og b. Et ytterligere fellestrekk (homologi), som oppstod i stamarten til de grønne planter, er celleveggen.";
   var string_goto_link_planter = "https://no.wikipedia.org/wiki/Gr%C3%B8nne_planter";
   var mouseX;
   var mouseY;
@@ -28,12 +28,12 @@ var popup = (function() {
     if ( clickedElementID == 1 ) {
       document.querySelector( '.popup-text' ).innerHTML = string_alger;
       //document.querySelector( '.popup-image' ).src = "alger.jpg";
-      document.querySelector( ' .popup-box-grid-top' ).style.backgroundImage = "url('alger.jpg')";
+      document.querySelector( '.popup-box-grid-top' ).style.backgroundImage = "url('alger.jpg')";
       document.querySelector( '.popup-goto-link' ).href = string_goto_link_alger;
     } else if ( clickedElementID == 2 ) {
       document.querySelector( '.popup-text' ).innerHTML = string_planter;
       //document.querySelector( '.popup-image' ).src = "planter.jpg";
-      document.querySelector( ' .popup-box-grid-top' ).style.backgroundImage = "url('planter.jpg')";
+      document.querySelector( '.popup-box-grid-top' ).style.backgroundImage = "url('planter.jpg')";
       document.querySelector( '.popup-goto-link' ).href = string_goto_link_planter;
     }
 
@@ -44,11 +44,13 @@ var popup = (function() {
     //document.querySelector( '.popup-image' ).onload = function() { rescaleAndMoveBox( mouseX, mouseY ) };
     rescaleAndMoveBox( mouseX, mouseY );
 
+
   }
 
   function rescaleAndMoveBox( mouseX, mouseY ) {
 
     var popup_box_rect = document.querySelector( '.popup-box' ).getBoundingClientRect();
+    console.log( "popup box rect height: ", popup_box_rect.height );
     var popup_box_arrow_rect = document.querySelector( '.popup-box-arrow' ).getBoundingClientRect();
 
     if ( mouseY > window.innerHeight/2 ) {
