@@ -39,7 +39,8 @@ var popup = (function() {
     mouseY = event.y;
 
     // Wait for image to load before resizing and moving box
-    document.querySelector( '.popup-image' ).onload = function() { rescaleAndMoveBox( mouseX, mouseY ) };
+    //document.querySelector( '.popup-image' ).onload = function() { rescaleAndMoveBox( mouseX, mouseY ) };
+    rescaleAndMoveBox( mouseX, mouseY );
 
   }
 
@@ -57,6 +58,7 @@ var popup = (function() {
 
       // BOX
       document.querySelector( '.popup-box' ).style.top = mouseY + window.scrollY - popup_box_rect.height - popup_box_arrow_rect.height + 'px';
+
     } else {
 
       // ARROW
